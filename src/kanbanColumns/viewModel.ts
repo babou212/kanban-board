@@ -1,4 +1,3 @@
-import ko from "knockout";
 import dragula from 'dragula';
 import Store from "../service/stateService";
 

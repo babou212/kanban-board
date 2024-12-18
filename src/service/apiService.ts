@@ -21,3 +21,14 @@ export function postFormApi(ticket: ticket):void {
         console.warn("Error", error);
     });
 }
+
+export async function getTickets() {
+    const data = await fetch("http://localhost:8000/tickets", {
+        method: 'GET'})
+        .then((response) => {
+            if (response.ok) return response.json();
+            return null;
+    });
+
+    return data;
+}

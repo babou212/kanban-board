@@ -17,6 +17,7 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "dragula": "^3.7.3",
     "knockout": "^3.5.1"
   }
 }

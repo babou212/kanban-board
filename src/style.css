@@ -1,15 +1,15 @@
 :root {
-    font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-    background-color: #231942;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+  background-color: #231942;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 button[type=submit] {
@@ -17,7 +17,6 @@ button[type=submit] {
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin: 4px 2px;
   border:none;
   border-radius:10px;
   cursor: pointer;
@@ -29,6 +28,7 @@ button[type=submit]:hover {
 }
 
 input[type=text] {
+  display: flex;
   padding: 1rem;
   border:none;
   border-radius:10px;
@@ -50,4 +50,56 @@ input[type=text] {
   background-color: #be95c4;
   padding: 2em;
   max-width: 20%;
+}
+
+.kanban-columns-comp {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.progress-column {
+  display: inline-flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 26rem;
+  height: 100%;
+  background-color: #be95c4;
+  border-radius:10px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 100px 1fr;
+  padding: 1rem;
+  margin: 2rem;
+  background-color:#9f86c0;
+  border-radius:10px;
+  cursor: move;
+}
+
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
 }

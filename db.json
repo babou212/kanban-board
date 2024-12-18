@@ -22,13 +22,13 @@
       "id": "ab2a9fd9-6023-4066-bfdc-6f3f0d87a030",
       "title": "install required plugins",
       "description": "Install any other required plugins such as auth plugins etc...",
-      "state": "NEW"
+      "state": "IN PROGRESS"
     },
     {
       "id": "6fe1f2db-02bf-431c-9e58-10c2e6cc0764",
       "title": "add typescript to project",
       "description": "This ticket will be for adding typescript to our vanilla JS application",
-      "state": "NEW"
+      "state": "DONE"
     }
   ]
 }

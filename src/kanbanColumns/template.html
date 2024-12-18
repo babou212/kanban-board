@@ -1,0 +1,30 @@
+<div class="kanban-columns-container">
+    <div class="progress-column">
+        New
+        <div id="new" data-bind="foreach: newTickets" class="tickets-container">
+            <p></p>
+            <div class="card" draggable="true">
+                <p data-bind="text: title"></p>
+                <p data-bind="text: description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="progress-column">
+        In Progress
+        <div id="in-progress" data-bind="foreach: inProgressTickets" class="tickets-container">
+            <div class="card" draggable="true">
+                <p data-bind="text: title"></p>
+                <p data-bind="text: description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="progress-column">
+        Done
+    <div id="done" data-bind="foreach: doneTickets" class="tickets-container">
+        <div class="card" draggable="true">
+            <p data-bind="text: title"></p>
+            <p data-bind="text: description"></p>
+        </div>
+        </div>
+    </div>
+</div>

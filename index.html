@@ -16,6 +16,13 @@
     params: { initialText: "Funky Kanban" }
     } -->
     <!-- /ko -->
+    <script>
+      /**
+       * this is a hack for dragula
+       * error: global is not defined
+       */
+      var global = global || window
+      </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

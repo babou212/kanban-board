@@ -1,27 +1,26 @@
 <div class="kanban-columns-container">
     <div class="progress-column">
-        New
+        <p class="text">New</p>
         <div id="new" data-bind="foreach: newTickets" class="tickets-container">
-            <p></p>
-            <div class="card" draggable="true">
+            <div class="card" draggable="true" data-bind="attr: { dataId: id }">
                 <p data-bind="text: title"></p>
                 <p data-bind="text: description"></p>
             </div>
         </div>
     </div>
     <div class="progress-column">
-        In Progress
+        <p class="text">In Progress</p>
         <div id="in-progress" data-bind="foreach: inProgressTickets" class="tickets-container">
-            <div class="card" draggable="true">
+            <div class="card" draggable="true" data-bind="attr: { dataId: id }">
                 <p data-bind="text: title"></p>
                 <p data-bind="text: description"></p>
             </div>
         </div>
     </div>
     <div class="progress-column">
-        Done
+        <p class="text">Done</p>
     <div id="done" data-bind="foreach: doneTickets" class="tickets-container">
-        <div class="card" draggable="true">
+        <div class="card" draggable="true" data-bind="attr: { dataId: id }">
             <p data-bind="text: title"></p>
             <p data-bind="text: description"></p>
         </div>

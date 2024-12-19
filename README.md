@@ -18,3 +18,6 @@ make
 * Vite
 * Knockout.js
 * TypeScript
+
+### Demo
+* https://babou212.github.io/kanban-board/

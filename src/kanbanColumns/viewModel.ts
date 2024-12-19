@@ -1,11 +1,15 @@
 import dragula from 'dragula';
 import Store from "../service/stateService";
 import { TicketProgress } from '../enum/TicketProgress';
+import ko from 'knockout';
 
 export function kanbanColumns() {
     const newTickets = Store.state.tickets().filter((ticket) => ticket.state == "NEW");
+    const newCount = ko.observable(newTickets.length);
     const inProgressTickets = Store.state.tickets().filter((ticket) => ticket.state == "IN PROGRESS");
+    const progressCount = ko.observable(inProgressTickets.length);
     const doneTickets = Store.state.tickets().filter((ticket) => ticket.state == "DONE");
+    const doneCount = ko.observable(doneTickets.length);
 
    const drake =  dragula([
         document.getElementById("new"),
@@ -23,19 +27,19 @@ export function kanbanColumns() {
           ticketToAdd.filter((ticket) => ticket.state = TicketProgress.InProgress)
           
           // push ticket to new array
-          inProgressTickets.push(ticketToAdd);
+          inProgressTickets.push(ticketToAdd[0]);
         }
 
         if (targetId == "new") {
           const ticketToAdd = Store.state.tickets().filter((ticket) => ticket.id == objectId);
           ticketToAdd.filter((ticket) => ticket.state = TicketProgress.New)
-          newTickets.push(ticketToAdd);
+          newTickets.push(ticketToAdd[0]);
         }
 
         if (targetId == "done") {
           const ticketToAdd = Store.state.tickets().filter((ticket) => ticket.id == objectId);
           ticketToAdd.filter((ticket) => ticket.state = TicketProgress.Done)
-          doneTickets.push(ticketToAdd);
+          doneTickets.push(ticketToAdd[0]);
         }
 
 
@@ -53,6 +57,9 @@ export function kanbanColumns() {
     newTickets,
     inProgressTickets,
     doneTickets,
+    newCount,
+    progressCount,
+    doneCount,
     updateTicketState
   };
 }

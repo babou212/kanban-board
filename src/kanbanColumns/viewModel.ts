@@ -41,15 +41,11 @@ export function kanbanColumns() {
           ticketToAdd.filter((ticket) => ticket.state = TicketProgress.Done)
           doneTickets.push(ticketToAdd[0]);
         }
-
-
-        console.log(newTickets, inProgressTickets, doneTickets);
       }
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       drake.on('drop', function(el: any, target: any) {
         const dataId = el.getAttribute("dataid");
-        console.log(target.id, dataId);
         updateTicketState(target.id, dataId);
       });
      

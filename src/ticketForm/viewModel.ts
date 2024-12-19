@@ -23,8 +23,6 @@ export function ticketForm() {
 
       // postFormApi(ticket);
       Store.state.tickets().push(ticket);
-      
-      console.log(Store.state.tickets);
 
       title("");
       description("");

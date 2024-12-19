@@ -2,10 +2,9 @@ import dragula from 'dragula';
 import Store from "../service/stateService";
 
 export function kanbanColumns() {
-    const tickets = Store.state.tickets;
-    const newTickets = tickets().filter((ticket) => ticket.state == "NEW");
-    const inProgressTickets = tickets().filter((ticket) => ticket.state == "IN PROGRESS");
-    const doneTickets = tickets().filter((ticket) => ticket.state == "DONE");
+    const newTickets = Store.state.tickets().filter((ticket) => ticket.state == "NEW");
+    const inProgressTickets = Store.state.tickets().filter((ticket) => ticket.state == "IN PROGRESS");
+    const doneTickets = Store.state.tickets().filter((ticket) => ticket.state == "DONE");
 
     dragula([
         document.getElementById("new"),

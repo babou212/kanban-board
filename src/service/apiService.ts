@@ -1,4 +1,5 @@
 import { ticket } from "../interface/ticket";
+import Store from "../service/stateService";
 
 export function postFormApi(ticket: ticket):void {
     const formBody = {
@@ -16,6 +17,7 @@ export function postFormApi(ticket: ticket):void {
         },
     }).then((response) => 
     {
+        Store.state.tickets().push(formBody);
         return response.json();
     }).catch((error) => {
         console.warn("Error", error);

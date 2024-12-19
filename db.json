@@ -29,6 +29,12 @@
       "title": "add typescript to project",
       "description": "This ticket will be for adding typescript to our vanilla JS application",
       "state": "DONE"
+    },
+    {
+      "id": "8d18e12a-c310-4b5b-8511-a1632dcd8d67",
+      "title": "Angular for Enterprise Applications",
+      "description": "spring boot",
+      "state": "NEW"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import ko from "knockout";
+import Store from "../service/stateService";
 import { TicketProgress } from "../enum/TicketProgress";
-import { postFormApi } from "../service/apiService";
+// import { postFormApi } from "../service/apiService";
 
 export function ticketForm() {
   const title = ko.observable("");
@@ -20,7 +21,10 @@ export function ticketForm() {
         state: TicketProgress.New
       }
 
-      postFormApi(ticket);
+      // postFormApi(ticket);
+      Store.state.tickets().push(ticket);
+      
+      console.log(Store.state.tickets);
 
       title("");
       description("");

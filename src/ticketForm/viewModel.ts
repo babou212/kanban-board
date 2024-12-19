@@ -5,6 +5,11 @@ import { postFormApi } from "../service/apiService";
 export function ticketForm() {
   const title = ko.observable("");
   const description = ko.observable("");
+  const isToggle = ko.observable(false);
+
+  const toggleForm = () => {
+    isToggle(!isToggle());
+  }
 
   const submitForm = function () {
     if (title() != "" && description() != "") {
@@ -25,7 +30,9 @@ export function ticketForm() {
   return {
     title,
     description,
-    submitForm
+    submitForm,
+    toggleForm,
+    isToggle
   };
 }
 

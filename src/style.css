@@ -12,7 +12,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-button[type=submit] {
+button[type=submit], .toggle-button {
   background-color: #5e548e;
   color: white;
   padding: 16px 32px;
@@ -22,7 +22,7 @@ button[type=submit] {
   cursor: pointer;
 }
 
-button[type=submit]:hover {
+button[type=submit]:hover, .toggle-button:hover {
   background-color:#9f86c0;
   transition: 0.7s;
 }
@@ -32,6 +32,10 @@ input[type=text] {
   padding: 1rem;
   border:none;
   border-radius:10px;
+}
+
+.toggle-button {
+  margin-top: 0.5rem;
 }
 
 .body {
